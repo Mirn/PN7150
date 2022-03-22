@@ -392,5 +392,28 @@ class NCI {
     Tag theTags[maxNmbrTags];                                // array to store the data of a number of currently present tags. When uniqueIdLenght == 0 it means invalid data in this position of the array
     uint8_t nmbrOfTags = 0;                                  // how many tags are actually in the array
     void saveTag(uint8_t msgType);
+
+  public:
+    const char* getStateStr() const {
+        if (theState == NciState::HwResetRfc              ) return "HwResetRfc";
+        if (theState == NciState::HwResetWfr              ) return "HwResetWfr";
+        if (theState == NciState::SwResetRfc              ) return "SwResetRfc";
+        if (theState == NciState::SwResetWfr              ) return "SwResetWfr";
+        if (theState == NciState::EnableCustomCommandsRfc ) return "EnableCustomCommandsRfc";
+        if (theState == NciState::EnableCustomCommandsWfr ) return "EnableCustomCommandsWfr";
+        if (theState == NciState::RfIdleCmd               ) return "RfIdleCmd";
+        if (theState == NciState::RfIdleWfr               ) return "RfIdleWfr";
+        if (theState == NciState::RfGoToDiscoveryWfr      ) return "RfGoToDiscoveryWfr";
+        if (theState == NciState::RfDiscovery             ) return "RfDiscovery";
+        if (theState == NciState::RfWaitForAllDiscoveries ) return "RfWaitForAllDiscoveries";
+        if (theState == NciState::RfWaitForHostSelect     ) return "RfWaitForHostSelect";
+        if (theState == NciState::RfPollActive            ) return "RfPollActive";
+        if (theState == NciState::RfDeActivate1Wfr        ) return "RfDeActivate1Wfr";
+        if (theState == NciState::RfDeActivate2Wfr        ) return "RfDeActivate2Wfr";
+        if (theState == NciState::RfDeActivate2Wfn        ) return "RfDeActivate2Wfn";
+        if (theState == NciState::Error                   ) return "Error";
+        if (theState == NciState::End                     ) return "End";
+        return "???";
+    };
 };
 
