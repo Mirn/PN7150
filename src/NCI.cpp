@@ -1,6 +1,18 @@
 #include "nci.h"
 
-NCI::NCI(PN7150Interface& aHardwareInterface) : theHardwareInterface(aHardwareInterface), theState(NciState::HwResetRfc), theTagsStatus(TagsPresentStatus::unknown) {
+static uint32_t millis()
+{
+	return DWT_CYCCNT / (SystemCoreClock / 1000);
+}
+
+NCI::NCI(PN7150Interface& aHardwareInterface) :
+	theHardwareInterface(aHardwareInterface),
+	theState(NciState::HwResetRfc),
+	theTagsStatus(TagsPresentStatus::unknown),
+	rxMessageLength(0),
+	timeOut(100),
+	timeOutStartTime(0)
+{
 }
 
 void NCI::initialize() {
