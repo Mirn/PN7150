@@ -362,3 +362,39 @@ void NCI::saveTag(uint8_t msgType) {
 bool NCI::newTagPresent() const {        // returns true only if a new tag is present
     return (TagsPresentStatus::newTagPresent == theTagsStatus);
 }
+
+extern "C" void nci_test()
+{
+	PN7150Interface pn7150;
+	NCI nci(pn7150);
+
+	nci.initialize();
+	nci.activate();
+
+	const char *old_state = "non inited";
+
+	while (1) {
+		nci.run();
+		{
+			const char *new_state = nci.getStateStr();
+			if (new_state != old_state)
+				printf("State changed: %s --> %s\n", old_state, new_state);
+			old_state = new_state;
+		}
+
+		if (nci.newTagPresent())
+		{
+			for (int i = 0; i < nci.getNmbrOfTags(); i++)
+			{
+				Tag *tag = nci.getTag(i);
+				printf("tag(%i / %i): ", i, tag->uniqueIdLength);
+				for (int j = 0; j < tag->uniqueIdLength; j++)
+					printf("%02X ", tag->uniqueId[j]);
+				printf("\n");
+			}
+			printf("\n");
+
+		}
+		delay_us(100);
+	}
+}
