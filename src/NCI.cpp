@@ -363,6 +363,11 @@ bool NCI::newTagPresent() const {        // returns true only if a new tag is pr
     return (TagsPresentStatus::newTagPresent == theTagsStatus);
 }
 
+typedef struct {
+	uint8_t tag[7];
+	const char *name;
+} tTagInfo;
+
 extern "C" void nci_test()
 {
 	PN7150Interface pn7150;
@@ -372,29 +377,51 @@ extern "C" void nci_test()
 	nci.activate();
 
 	const char *old_state = "non inited";
+	uint8_t tags_cnt = 0;
+
+	const tTagInfo taginfo[3] = {
+			{{0x04, ????????????????????????????? 0x80}, "Mijica",},
+			{{0x04, ????????????????????????????? 0x80}, "DoorCard"},
+			{{0x04, ????????????????????????????? 0x80}, "Sony"},
+	};
 
 	while (1) {
 		nci.run();
-		{
-			const char *new_state = nci.getStateStr();
-			if (new_state != old_state)
-				printf("State changed: %s --> %s\n", old_state, new_state);
-			old_state = new_state;
-		}
+//		{
+//			const char *new_state = nci.getStateStr();
+//			if (new_state != old_state)
+//				printf("State changed: %s --> %s\n", old_state, new_state);
+//			old_state = new_state;
+//		}
+
+//		{
+//			uint8_t new_tags = nci.getNmbrOfTags();
+//			if (tags_cnt > new_tags)
+//				printf("%i tags removed\n", tags_cnt - new_tags);
+//			tags_cnt = new_tags;
+//		}
 
 		if (nci.newTagPresent())
 		{
 			for (int i = 0; i < nci.getNmbrOfTags(); i++)
 			{
+				const char *name = "";
 				Tag *tag = nci.getTag(i);
+				for (int j = 0; j < LENGTH(taginfo); j++)
+					if (strncmp((const char*)taginfo[j].tag, (const char*)tag->uniqueId, 7) == 0)
+					{
+						name = taginfo[j].name;
+						break;
+					}
+
 				printf("tag(%i / %i): ", i, tag->uniqueIdLength);
 				for (int j = 0; j < tag->uniqueIdLength; j++)
 					printf("%02X ", tag->uniqueId[j]);
-				printf("\n");
+				printf("\t%s\n", name);
 			}
 			printf("\n");
 
 		}
-		delay_us(100);
+		delay_ms(1);
 	}
 }
