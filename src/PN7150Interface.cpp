@@ -10,6 +10,7 @@
 
 #include "PN7150Interface.h"									// NCI protocol runs over a hardware interface, in this case an I2C with 2 extra handshaking signals
 
+extern uint32_t nci_tick;
 
 PN7150Interface::PN7150Interface() : I2Caddress(0x50)
 {
@@ -172,6 +173,10 @@ bool PN7150Interface::hasMessage() const
 
 uint8_t PN7150Interface::write(uint8_t txBuffer[], uint32_t txBufferLevel) const
 {
+	printf("%7i\tWR: ", nci_tick);
+	for (uint32_t i=0; i < txBufferLevel; i++)
+		printf("%02X ", txBuffer[i]);
+	printf("\n");
     //Wire.beginTransmission(I2Caddress);									// Setup I2C to transmit
     uint32_t nmbrBytesWritten = 0;
     //nmbrBytesWritten = Wire.write(txBuffer, txBufferLevel);				// Copy the data into the I2C transmit buffer
@@ -214,6 +219,10 @@ uint32_t PN7150Interface::read(uint8_t rxBuffer[]) const
     {
         bytesReceived = 0;
     }
+	printf("%7i\tRX: ", nci_tick);
+	for (uint32_t i=0; i < bytesReceived; i++)
+		printf("%02X ", rxBuffer[i]);
+	printf("\n");
     return bytesReceived;
 }
 

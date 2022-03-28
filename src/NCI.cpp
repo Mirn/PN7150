@@ -1,5 +1,7 @@
 #include "nci.h"
 
+uint32_t nci_tick = 0;
+
 static uint32_t millis()
 {
 	return DWT_CYCCNT / (SystemCoreClock / 1000);
@@ -11,7 +13,8 @@ NCI::NCI(PN7150Interface& aHardwareInterface) :
 	theTagsStatus(TagsPresentStatus::unknown),
 	rxMessageLength(0),
 	timeOut(100),
-	timeOutStartTime(0)
+	timeOutStartTime(0),
+	txBufferLength(0)
 {
 }
 
@@ -387,17 +390,22 @@ extern "C" void nci_test()
 
 	while (1) {
 		nci.run();
-//		{
-//			const char *new_state = nci.getStateStr();
-//			if (new_state != old_state)
-//				printf("State changed: %s --> %s\n", old_state, new_state);
-//			old_state = new_state;
-//		}
+		uint8_t *txbuf = nullptr;
+		uint32_t txlen = 0;
+		if (nci.getTXmessage(&txbuf, &txlen))
+			pn7150.write(txbuf, txlen);
+
+		{
+			const char *new_state = nci.getStateStr();
+			if (new_state != old_state)
+				printf("%7i\tState changed: %s --> %s\n", nci_tick, old_state, new_state);
+			old_state = new_state;
+		}
 
 //		{
 //			uint8_t new_tags = nci.getNmbrOfTags();
 //			if (tags_cnt > new_tags)
-//				printf("%i tags removed\n", tags_cnt - new_tags);
+//				printf("%7i\t%i tags removed\n", nci_tick, tags_cnt - new_tags);
 //			tags_cnt = new_tags;
 //		}
 
@@ -423,5 +431,6 @@ extern "C" void nci_test()
 
 		}
 		delay_ms(1);
+		nci_tick++;
 	}
 }
