@@ -40,7 +40,7 @@
 class PN7150Interface {
   public:
     PN7150Interface();                            // Constructor with default I2C address
-    PN7150Interface(uint8_t I2Caddress);        // Constructor with custom I2C address
+    PN7150Interface(uint8_t I2C_address);        // Constructor with custom I2C address
     void initialize(void);                                                // Initialize the HW interface at the Device Host
     uint8_t write(uint8_t data[], uint32_t dataLength) const;             // write data from DeviceHost to PN7150. Returns success (0) or Fail (> 0)
     uint32_t read(uint8_t data[]) const;                                  // read data from PN7150, returns the amount of bytes read

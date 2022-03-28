@@ -16,7 +16,7 @@ PN7150Interface::PN7150Interface() : I2Caddress(0x50)
     // Constructor, initializing IRQ and VEN and setting I2Caddress to a default value of 0x28
 }
 
-PN7150Interface::PN7150Interface(uint8_t I2Caddress) : I2Caddress(I2Caddress)
+PN7150Interface::PN7150Interface(uint8_t I2C_address) : I2Caddress(I2C_address)
 {
     // Constructor, initializing IRQ and VEN and initializing I2Caddress to a custom value
 }
