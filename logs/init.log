@@ -1,0 +1,39 @@
+time ms message
+---------------------------------------------------------------------------------------------------
+      0	WR: 20 00 01 00 
+      0	State changed: non inited --> HwResetWfr
+      2	RX: 40 00 03 00 11 00 
+      2	State changed: HwResetWfr --> SwResetRfc
+      3	WR: 20 01 00 
+      3	State changed: SwResetRfc --> SwResetWfr
+      4	RX: 40 01 19 00 03 1E 03 00 08 00 01 02 03 80 81 82 83 02 D0 02 FF 02 00 04 88 10 01 A0 
+      4	State changed: SwResetWfr --> EnableCustomCommandsRfc
+      5	WR: 2F 02 00 
+      5	State changed: EnableCustomCommandsRfc --> EnableCustomCommandsWfr
+      6	RX: 4F 02 05 00 00 00 9F 97 
+      6	State changed: EnableCustomCommandsWfr --> RfIdleCmd
+      7	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+      7	State changed: RfIdleCmd --> RfIdleWfr
+      9	RX: 41 03 01 00 
+      9	State changed: RfIdleWfr --> RfDiscovery
+
+
+
+      0	WR: 20 00 01 00 
+      2	RX: 40 00 03 00 11 00 
+      3	WR: 20 01 00 
+      4	RX: 40 01 19 00 03 1E 03 00 08 00 01 02 03 80 81 82 83 02 D0 02 FF 02 00 04 88 10 01 A0 
+      5	WR: 2F 02 00 
+      6	RX: 4F 02 05 00 00 00 9F 97 
+      7	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+      9	RX: 41 03 01 00 
+
+
+      0	State changed: non inited --> HwResetWfr
+      2	State changed: HwResetWfr --> SwResetRfc
+      3	State changed: SwResetRfc --> SwResetWfr
+      4	State changed: SwResetWfr --> EnableCustomCommandsRfc
+      5	State changed: EnableCustomCommandsRfc --> EnableCustomCommandsWfr
+      6	State changed: EnableCustomCommandsWfr --> RfIdleCmd
+      7	State changed: RfIdleCmd --> RfIdleWfr
+      9	State changed: RfIdleWfr --> RfDiscovery

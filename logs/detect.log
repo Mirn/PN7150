@@ -1,0 +1,447 @@
+ 120943	RX: 61 05 17 01 01 02 00 FF 01 0C 44 00 07 04 6C AA 7A 2A 62 80 01 00 00 00 00 00 
+ 120943	State changed: RfDiscovery --> RfPollActive
+tag(0 / 7): 04 6C AA 7A 2A 62 80 	DoorCard
+
+ 120944	WR: 21 06 01 00 
+ 120944	State changed: RfPollActive --> RfDeActivate2Wfr
+ 120945	RX: 41 06 01 00 
+ 120945	State changed: RfDeActivate2Wfr --> RfDeActivate2Wfn
+ 120946	RX: 61 06 02 00 00 
+ 120946	State changed: RfDeActivate2Wfn --> RfIdleCmd
+ 120947	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+ 120947	State changed: RfIdleCmd --> RfIdleWfr
+ 120949	RX: 41 03 01 00 
+ 120949	State changed: RfIdleWfr --> RfDiscovery
+ 120959	RX: 61 05 17 01 01 02 00 FF 01 0C 44 00 07 04 6C AA 7A 2A 62 80 01 00 00 00 00 00 
+ 120959	State changed: RfDiscovery --> RfPollActive
+ 120960	WR: 21 06 01 00 
+ 120960	State changed: RfPollActive --> RfDeActivate2Wfr
+ 120961	RX: 41 06 01 00 
+ 120961	State changed: RfDeActivate2Wfr --> RfDeActivate2Wfn
+ 120962	RX: 61 06 02 00 00 
+ 120962	State changed: RfDeActivate2Wfn --> RfIdleCmd
+ 120963	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+ 120963	State changed: RfIdleCmd --> RfIdleWfr
+ 120965	RX: 41 03 01 00 
+ 120965	State changed: RfIdleWfr --> RfDiscovery
+ 120975	RX: 61 05 17 01 01 02 00 FF 01 0C 44 00 07 04 6C AA 7A 2A 62 80 01 00 00 00 00 00 
+ 120975	State changed: RfDiscovery --> RfPollActive
+ 120976	WR: 21 06 01 00 
+ 120976	State changed: RfPollActive --> RfDeActivate2Wfr
+ 120977	RX: 41 06 01 00 
+ 120977	State changed: RfDeActivate2Wfr --> RfDeActivate2Wfn
+ 120978	RX: 61 06 02 00 00 
+ 120978	State changed: RfDeActivate2Wfn --> RfIdleCmd
+ 120979	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+ 120979	State changed: RfIdleCmd --> RfIdleWfr
+ 120981	RX: 41 03 01 00 
+ 120981	State changed: RfIdleWfr --> RfDiscovery
+ 120991	RX: 61 05 17 01 01 02 00 FF 01 0C 44 00 07 04 6C AA 7A 2A 62 80 01 00 00 00 00 00 
+ 120991	State changed: RfDiscovery --> RfPollActive
+ 120992	WR: 21 06 01 00 
+ 120992	State changed: RfPollActive --> RfDeActivate2Wfr
+ 120993	RX: 41 06 01 00 
+ 120993	State changed: RfDeActivate2Wfr --> RfDeActivate2Wfn
+ 120994	RX: 61 06 02 00 00 
+ 120994	State changed: RfDeActivate2Wfn --> RfIdleCmd
+ 120995	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+ 120995	State changed: RfIdleCmd --> RfIdleWfr
+ 120997	RX: 41 03 01 00 
+ 120997	State changed: RfIdleWfr --> RfDiscovery
+ 121007	RX: 61 05 17 01 01 02 00 FF 01 0C 44 00 07 04 6C AA 7A 2A 62 80 01 00 00 00 00 00 
+ 121007	State changed: RfDiscovery --> RfPollActive
+ 121008	WR: 21 06 01 00 
+ 121008	State changed: RfPollActive --> RfDeActivate2Wfr
+ 121009	RX: 41 06 01 00 
+ 121009	State changed: RfDeActivate2Wfr --> RfDeActivate2Wfn
+ 121010	RX: 61 06 02 00 00 
+ 121010	State changed: RfDeActivate2Wfn --> RfIdleCmd
+ 121011	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+ 121011	State changed: RfIdleCmd --> RfIdleWfr
+ 121013	RX: 41 03 01 00 
+ 121013	State changed: RfIdleWfr --> RfDiscovery
+ 121023	RX: 61 05 17 01 01 02 00 FF 01 0C 44 00 07 04 6C AA 7A 2A 62 80 01 00 00 00 00 00 
+ 121023	State changed: RfDiscovery --> RfPollActive
+ 121024	WR: 21 06 01 00 
+ 121024	State changed: RfPollActive --> RfDeActivate2Wfr
+ 121025	RX: 41 06 01 00 
+ 121025	State changed: RfDeActivate2Wfr --> RfDeActivate2Wfn
+ 121026	RX: 61 06 02 00 00 
+ 121026	State changed: RfDeActivate2Wfn --> RfIdleCmd
+ 121027	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+ 121027	State changed: RfIdleCmd --> RfIdleWfr
+ 121029	RX: 41 03 01 00 
+ 121029	State changed: RfIdleWfr --> RfDiscovery
+ 121039	RX: 61 05 17 01 01 02 00 FF 01 0C 44 00 07 04 6C AA 7A 2A 62 80 01 00 00 00 00 00 
+ 121039	State changed: RfDiscovery --> RfPollActive
+ 121040	WR: 21 06 01 00 
+ 121040	State changed: RfPollActive --> RfDeActivate2Wfr
+ 121041	RX: 41 06 01 00 
+ 121041	State changed: RfDeActivate2Wfr --> RfDeActivate2Wfn
+ 121042	RX: 61 06 02 00 00 
+ 121042	State changed: RfDeActivate2Wfn --> RfIdleCmd
+ 121043	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+ 121043	State changed: RfIdleCmd --> RfIdleWfr
+ 121045	RX: 41 03 01 00 
+ 121045	State changed: RfIdleWfr --> RfDiscovery
+ 121055	RX: 61 05 17 01 01 02 00 FF 01 0C 44 00 07 04 6C AA 7A 2A 62 80 01 00 00 00 00 00 
+ 121055	State changed: RfDiscovery --> RfPollActive
+ 121056	WR: 21 06 01 00 
+ 121056	State changed: RfPollActive --> RfDeActivate2Wfr
+ 121057	RX: 41 06 01 00 
+ 121057	State changed: RfDeActivate2Wfr --> RfDeActivate2Wfn
+ 121058	RX: 61 06 02 00 00 
+ 121058	State changed: RfDeActivate2Wfn --> RfIdleCmd
+ 121059	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+ 121059	State changed: RfIdleCmd --> RfIdleWfr
+ 121061	RX: 41 03 01 00 
+ 121061	State changed: RfIdleWfr --> RfDiscovery
+ 121071	RX: 61 05 17 01 01 02 00 FF 01 0C 44 00 07 04 6C AA 7A 2A 62 80 01 00 00 00 00 00 
+ 121071	State changed: RfDiscovery --> RfPollActive
+ 121072	WR: 21 06 01 00 
+ 121072	State changed: RfPollActive --> RfDeActivate2Wfr
+ 121073	RX: 41 06 01 00 
+ 121073	State changed: RfDeActivate2Wfr --> RfDeActivate2Wfn
+ 121074	RX: 61 06 02 00 00 
+ 121074	State changed: RfDeActivate2Wfn --> RfIdleCmd
+ 121075	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+ 121075	State changed: RfIdleCmd --> RfIdleWfr
+ 121077	RX: 41 03 01 00 
+ 121077	State changed: RfIdleWfr --> RfDiscovery
+ 121087	RX: 61 05 17 01 01 02 00 FF 01 0C 44 00 07 04 6C AA 7A 2A 62 80 01 00 00 00 00 00 
+ 121087	State changed: RfDiscovery --> RfPollActive
+ 121088	WR: 21 06 01 00 
+ 121088	State changed: RfPollActive --> RfDeActivate2Wfr
+ 121089	RX: 41 06 01 00 
+ 121089	State changed: RfDeActivate2Wfr --> RfDeActivate2Wfn
+ 121090	RX: 61 06 02 00 00 
+ 121090	State changed: RfDeActivate2Wfn --> RfIdleCmd
+ 121091	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+ 121091	State changed: RfIdleCmd --> RfIdleWfr
+ 121093	RX: 41 03 01 00 
+ 121093	State changed: RfIdleWfr --> RfDiscovery
+ 121103	RX: 61 05 17 01 01 02 00 FF 01 0C 44 00 07 04 6C AA 7A 2A 62 80 01 00 00 00 00 00 
+ 121103	State changed: RfDiscovery --> RfPollActive
+ 121104	WR: 21 06 01 00 
+ 121104	State changed: RfPollActive --> RfDeActivate2Wfr
+ 121105	RX: 41 06 01 00 
+ 121105	State changed: RfDeActivate2Wfr --> RfDeActivate2Wfn
+ 121106	RX: 61 06 02 00 00 
+ 121106	State changed: RfDeActivate2Wfn --> RfIdleCmd
+ 121107	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+ 121107	State changed: RfIdleCmd --> RfIdleWfr
+ 121109	RX: 41 03 01 00 
+ 121109	State changed: RfIdleWfr --> RfDiscovery
+ 121119	RX: 61 05 17 01 01 02 00 FF 01 0C 44 00 07 04 6C AA 7A 2A 62 80 01 00 00 00 00 00 
+ 121119	State changed: RfDiscovery --> RfPollActive
+ 121120	WR: 21 06 01 00 
+ 121120	State changed: RfPollActive --> RfDeActivate2Wfr
+ 121121	RX: 41 06 01 00 
+ 121121	State changed: RfDeActivate2Wfr --> RfDeActivate2Wfn
+ 121122	RX: 61 06 02 00 00 
+ 121122	State changed: RfDeActivate2Wfn --> RfIdleCmd
+ 121123	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+ 121123	State changed: RfIdleCmd --> RfIdleWfr
+ 121125	RX: 41 03 01 00 
+ 121125	State changed: RfIdleWfr --> RfDiscovery
+ 121135	RX: 61 05 17 01 01 02 00 FF 01 0C 44 00 07 04 6C AA 7A 2A 62 80 01 00 00 00 00 00 
+ 121135	State changed: RfDiscovery --> RfPollActive
+ 121136	WR: 21 06 01 00 
+ 121136	State changed: RfPollActive --> RfDeActivate2Wfr
+ 121137	RX: 41 06 01 00 
+ 121137	State changed: RfDeActivate2Wfr --> RfDeActivate2Wfn
+ 121138	RX: 61 06 02 00 00 
+ 121138	State changed: RfDeActivate2Wfn --> RfIdleCmd
+ 121139	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+ 121139	State changed: RfIdleCmd --> RfIdleWfr
+ 121141	RX: 41 03 01 00 
+ 121141	State changed: RfIdleWfr --> RfDiscovery
+ 121151	RX: 61 05 17 01 01 02 00 FF 01 0C 44 00 07 04 6C AA 7A 2A 62 80 01 00 00 00 00 00 
+ 121151	State changed: RfDiscovery --> RfPollActive
+ 121152	WR: 21 06 01 00 
+ 121152	State changed: RfPollActive --> RfDeActivate2Wfr
+ 121153	RX: 41 06 01 00 
+ 121153	State changed: RfDeActivate2Wfr --> RfDeActivate2Wfn
+ 121154	RX: 61 06 02 00 00 
+ 121154	State changed: RfDeActivate2Wfn --> RfIdleCmd
+ 121155	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+ 121155	State changed: RfIdleCmd --> RfIdleWfr
+ 121157	RX: 41 03 01 00 
+ 121157	State changed: RfIdleWfr --> RfDiscovery
+ 121167	RX: 61 05 17 01 01 02 00 FF 01 0C 44 00 07 04 6C AA 7A 2A 62 80 01 00 00 00 00 00 
+ 121167	State changed: RfDiscovery --> RfPollActive
+ 121168	WR: 21 06 01 00 
+ 121168	State changed: RfPollActive --> RfDeActivate2Wfr
+ 121169	RX: 41 06 01 00 
+ 121169	State changed: RfDeActivate2Wfr --> RfDeActivate2Wfn
+ 121170	RX: 61 06 02 00 00 
+ 121170	State changed: RfDeActivate2Wfn --> RfIdleCmd
+ 121171	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+ 121171	State changed: RfIdleCmd --> RfIdleWfr
+ 121173	RX: 41 03 01 00 
+ 121173	State changed: RfIdleWfr --> RfDiscovery
+ 121183	RX: 61 05 17 01 01 02 00 FF 01 0C 44 00 07 04 6C AA 7A 2A 62 80 01 00 00 00 00 00 
+ 121183	State changed: RfDiscovery --> RfPollActive
+ 121184	WR: 21 06 01 00 
+ 121184	State changed: RfPollActive --> RfDeActivate2Wfr
+ 121185	RX: 41 06 01 00 
+ 121185	State changed: RfDeActivate2Wfr --> RfDeActivate2Wfn
+ 121186	RX: 61 06 02 00 00 
+ 121186	State changed: RfDeActivate2Wfn --> RfIdleCmd
+ 121187	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+ 121187	State changed: RfIdleCmd --> RfIdleWfr
+ 121189	RX: 41 03 01 00 
+ 121189	State changed: RfIdleWfr --> RfDiscovery
+ 121199	RX: 61 05 17 01 01 02 00 FF 01 0C 44 00 07 04 6C AA 7A 2A 62 80 01 00 00 00 00 00 
+ 121199	State changed: RfDiscovery --> RfPollActive
+ 121200	WR: 21 06 01 00 
+ 121200	State changed: RfPollActive --> RfDeActivate2Wfr
+ 121201	RX: 41 06 01 00 
+ 121201	State changed: RfDeActivate2Wfr --> RfDeActivate2Wfn
+ 121202	RX: 61 06 02 00 00 
+ 121202	State changed: RfDeActivate2Wfn --> RfIdleCmd
+ 121203	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+ 121203	State changed: RfIdleCmd --> RfIdleWfr
+ 121205	RX: 41 03 01 00 
+ 121205	State changed: RfIdleWfr --> RfDiscovery
+ 121215	RX: 61 05 17 01 01 02 00 FF 01 0C 44 00 07 04 6C AA 7A 2A 62 80 01 00 00 00 00 00 
+ 121215	State changed: RfDiscovery --> RfPollActive
+ 121216	WR: 21 06 01 00 
+ 121216	State changed: RfPollActive --> RfDeActivate2Wfr
+ 121217	RX: 41 06 01 00 
+ 121217	State changed: RfDeActivate2Wfr --> RfDeActivate2Wfn
+ 121218	RX: 61 06 02 00 00 
+ 121218	State changed: RfDeActivate2Wfn --> RfIdleCmd
+ 121219	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+ 121219	State changed: RfIdleCmd --> RfIdleWfr
+ 121221	RX: 41 03 01 00 
+ 121221	State changed: RfIdleWfr --> RfDiscovery
+ 121231	RX: 61 05 17 01 01 02 00 FF 01 0C 44 00 07 04 6C AA 7A 2A 62 80 01 00 00 00 00 00 
+ 121231	State changed: RfDiscovery --> RfPollActive
+ 121232	WR: 21 06 01 00 
+ 121232	State changed: RfPollActive --> RfDeActivate2Wfr
+ 121233	RX: 41 06 01 00 
+ 121233	State changed: RfDeActivate2Wfr --> RfDeActivate2Wfn
+ 121234	RX: 61 06 02 00 00 
+ 121234	State changed: RfDeActivate2Wfn --> RfIdleCmd
+ 121235	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+ 121235	State changed: RfIdleCmd --> RfIdleWfr
+ 121237	RX: 41 03 01 00 
+ 121237	State changed: RfIdleWfr --> RfDiscovery
+ 121247	RX: 61 05 17 01 01 02 00 FF 01 0C 44 00 07 04 6C AA 7A 2A 62 80 01 00 00 00 00 00 
+ 121247	State changed: RfDiscovery --> RfPollActive
+ 121248	WR: 21 06 01 00 
+ 121248	State changed: RfPollActive --> RfDeActivate2Wfr
+ 121249	RX: 41 06 01 00 
+ 121249	State changed: RfDeActivate2Wfr --> RfDeActivate2Wfn
+ 121250	RX: 61 06 02 00 00 
+ 121250	State changed: RfDeActivate2Wfn --> RfIdleCmd
+ 121251	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+ 121251	State changed: RfIdleCmd --> RfIdleWfr
+ 121253	RX: 41 03 01 00 
+ 121253	State changed: RfIdleWfr --> RfDiscovery
+ 121263	RX: 61 05 17 01 01 02 00 FF 01 0C 44 00 07 04 6C AA 7A 2A 62 80 01 00 00 00 00 00 
+ 121263	State changed: RfDiscovery --> RfPollActive
+ 121264	WR: 21 06 01 00 
+ 121264	State changed: RfPollActive --> RfDeActivate2Wfr
+ 121265	RX: 41 06 01 00 
+ 121265	State changed: RfDeActivate2Wfr --> RfDeActivate2Wfn
+ 121266	RX: 61 06 02 00 00 
+ 121266	State changed: RfDeActivate2Wfn --> RfIdleCmd
+ 121267	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+ 121267	State changed: RfIdleCmd --> RfIdleWfr
+ 121269	RX: 41 03 01 00 
+ 121269	State changed: RfIdleWfr --> RfDiscovery
+ 121279	RX: 61 05 17 01 01 02 00 FF 01 0C 44 00 07 04 6C AA 7A 2A 62 80 01 00 00 00 00 00 
+ 121279	State changed: RfDiscovery --> RfPollActive
+ 121280	WR: 21 06 01 00 
+ 121280	State changed: RfPollActive --> RfDeActivate2Wfr
+ 121281	RX: 41 06 01 00 
+ 121281	State changed: RfDeActivate2Wfr --> RfDeActivate2Wfn
+ 121282	RX: 61 06 02 00 00 
+ 121282	State changed: RfDeActivate2Wfn --> RfIdleCmd
+ 121283	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+ 121283	State changed: RfIdleCmd --> RfIdleWfr
+ 121285	RX: 41 03 01 00 
+ 121285	State changed: RfIdleWfr --> RfDiscovery
+ 121295	RX: 61 05 17 01 01 02 00 FF 01 0C 44 00 07 04 6C AA 7A 2A 62 80 01 00 00 00 00 00 
+ 121295	State changed: RfDiscovery --> RfPollActive
+ 121296	WR: 21 06 01 00 
+ 121296	State changed: RfPollActive --> RfDeActivate2Wfr
+ 121297	RX: 41 06 01 00 
+ 121297	State changed: RfDeActivate2Wfr --> RfDeActivate2Wfn
+ 121298	RX: 61 06 02 00 00 
+ 121298	State changed: RfDeActivate2Wfn --> RfIdleCmd
+ 121299	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+ 121299	State changed: RfIdleCmd --> RfIdleWfr
+ 121301	RX: 41 03 01 00 
+ 121301	State changed: RfIdleWfr --> RfDiscovery
+ 121311	RX: 61 05 17 01 01 02 00 FF 01 0C 44 00 07 04 6C AA 7A 2A 62 80 01 00 00 00 00 00 
+ 121311	State changed: RfDiscovery --> RfPollActive
+ 121312	WR: 21 06 01 00 
+ 121312	State changed: RfPollActive --> RfDeActivate2Wfr
+ 121313	RX: 41 06 01 00 
+ 121313	State changed: RfDeActivate2Wfr --> RfDeActivate2Wfn
+ 121314	RX: 61 06 02 00 00 
+ 121314	State changed: RfDeActivate2Wfn --> RfIdleCmd
+ 121315	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+ 121315	State changed: RfIdleCmd --> RfIdleWfr
+ 121317	RX: 41 03 01 00 
+ 121317	State changed: RfIdleWfr --> RfDiscovery
+ 121327	RX: 61 05 17 01 01 02 00 FF 01 0C 44 00 07 04 6C AA 7A 2A 62 80 01 00 00 00 00 00 
+ 121327	State changed: RfDiscovery --> RfPollActive
+ 121328	WR: 21 06 01 00 
+ 121328	State changed: RfPollActive --> RfDeActivate2Wfr
+ 121329	RX: 41 06 01 00 
+ 121329	State changed: RfDeActivate2Wfr --> RfDeActivate2Wfn
+ 121330	RX: 61 06 02 00 00 
+ 121330	State changed: RfDeActivate2Wfn --> RfIdleCmd
+ 121331	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+ 121331	State changed: RfIdleCmd --> RfIdleWfr
+ 121333	RX: 41 03 01 00 
+ 121333	State changed: RfIdleWfr --> RfDiscovery
+ 121343	RX: 61 05 17 01 01 02 00 FF 01 0C 44 00 07 04 6C AA 7A 2A 62 80 01 00 00 00 00 00 
+ 121343	State changed: RfDiscovery --> RfPollActive
+ 121344	WR: 21 06 01 00 
+ 121344	State changed: RfPollActive --> RfDeActivate2Wfr
+ 121345	RX: 41 06 01 00 
+ 121345	State changed: RfDeActivate2Wfr --> RfDeActivate2Wfn
+ 121346	RX: 61 06 02 00 00 
+ 121346	State changed: RfDeActivate2Wfn --> RfIdleCmd
+ 121347	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+ 121347	State changed: RfIdleCmd --> RfIdleWfr
+ 121349	RX: 41 03 01 00 
+ 121349	State changed: RfIdleWfr --> RfDiscovery
+ 121359	RX: 61 05 17 01 01 02 00 FF 01 0C 44 00 07 04 6C AA 7A 2A 62 80 01 00 00 00 00 00 
+ 121359	State changed: RfDiscovery --> RfPollActive
+ 121360	WR: 21 06 01 00 
+ 121360	State changed: RfPollActive --> RfDeActivate2Wfr
+ 121361	RX: 41 06 01 00 
+ 121361	State changed: RfDeActivate2Wfr --> RfDeActivate2Wfn
+ 121362	RX: 61 06 02 00 00 
+ 121362	State changed: RfDeActivate2Wfn --> RfIdleCmd
+ 121363	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+ 121363	State changed: RfIdleCmd --> RfIdleWfr
+ 121365	RX: 41 03 01 00 
+ 121365	State changed: RfIdleWfr --> RfDiscovery
+ 121375	RX: 61 05 17 01 01 02 00 FF 01 0C 44 00 07 04 6C AA 7A 2A 62 80 01 00 00 00 00 00 
+ 121375	State changed: RfDiscovery --> RfPollActive
+ 121376	WR: 21 06 01 00 
+ 121376	State changed: RfPollActive --> RfDeActivate2Wfr
+ 121377	RX: 41 06 01 00 
+ 121377	State changed: RfDeActivate2Wfr --> RfDeActivate2Wfn
+ 121378	RX: 61 06 02 00 00 
+ 121378	State changed: RfDeActivate2Wfn --> RfIdleCmd
+ 121379	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+ 121379	State changed: RfIdleCmd --> RfIdleWfr
+ 121381	RX: 41 03 01 00 
+ 121381	State changed: RfIdleWfr --> RfDiscovery
+ 121391	RX: 61 05 17 01 01 02 00 FF 01 0C 44 00 07 04 6C AA 7A 2A 62 80 01 00 00 00 00 00 
+ 121391	State changed: RfDiscovery --> RfPollActive
+ 121392	WR: 21 06 01 00 
+ 121392	State changed: RfPollActive --> RfDeActivate2Wfr
+ 121393	RX: 41 06 01 00 
+ 121393	State changed: RfDeActivate2Wfr --> RfDeActivate2Wfn
+ 121394	RX: 61 06 02 00 00 
+ 121394	State changed: RfDeActivate2Wfn --> RfIdleCmd
+ 121395	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+ 121395	State changed: RfIdleCmd --> RfIdleWfr
+ 121397	RX: 41 03 01 00 
+ 121397	State changed: RfIdleWfr --> RfDiscovery
+ 121407	RX: 61 05 17 01 01 02 00 FF 01 0C 44 00 07 04 6C AA 7A 2A 62 80 01 00 00 00 00 00 
+ 121407	State changed: RfDiscovery --> RfPollActive
+ 121408	WR: 21 06 01 00 
+ 121408	State changed: RfPollActive --> RfDeActivate2Wfr
+ 121409	RX: 41 06 01 00 
+ 121409	State changed: RfDeActivate2Wfr --> RfDeActivate2Wfn
+ 121410	RX: 61 06 02 00 00 
+ 121410	State changed: RfDeActivate2Wfn --> RfIdleCmd
+ 121411	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+ 121411	State changed: RfIdleCmd --> RfIdleWfr
+ 121413	RX: 41 03 01 00 
+ 121413	State changed: RfIdleWfr --> RfDiscovery
+ 121423	RX: 61 05 17 01 01 02 00 FF 01 0C 44 00 07 04 6C AA 7A 2A 62 80 01 00 00 00 00 00 
+ 121423	State changed: RfDiscovery --> RfPollActive
+ 121424	WR: 21 06 01 00 
+ 121424	State changed: RfPollActive --> RfDeActivate2Wfr
+ 121425	RX: 41 06 01 00 
+ 121425	State changed: RfDeActivate2Wfr --> RfDeActivate2Wfn
+ 121426	RX: 61 06 02 00 00 
+ 121426	State changed: RfDeActivate2Wfn --> RfIdleCmd
+ 121427	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+ 121427	State changed: RfIdleCmd --> RfIdleWfr
+ 121429	RX: 41 03 01 00 
+ 121429	State changed: RfIdleWfr --> RfDiscovery
+ 121439	RX: 61 05 17 01 01 02 00 FF 01 0C 44 00 07 04 6C AA 7A 2A 62 80 01 00 00 00 00 00 
+ 121439	State changed: RfDiscovery --> RfPollActive
+ 121440	WR: 21 06 01 00 
+ 121440	State changed: RfPollActive --> RfDeActivate2Wfr
+ 121441	RX: 41 06 01 00 
+ 121441	State changed: RfDeActivate2Wfr --> RfDeActivate2Wfn
+ 121442	RX: 61 06 02 00 00 
+ 121442	State changed: RfDeActivate2Wfn --> RfIdleCmd
+ 121443	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+ 121443	State changed: RfIdleCmd --> RfIdleWfr
+ 121445	RX: 41 03 01 00 
+ 121445	State changed: RfIdleWfr --> RfDiscovery
+ 121455	RX: 61 05 17 01 01 02 00 FF 01 0C 44 00 07 04 6C AA 7A 2A 62 80 01 00 00 00 00 00 
+ 121455	State changed: RfDiscovery --> RfPollActive
+ 121456	WR: 21 06 01 00 
+ 121456	State changed: RfPollActive --> RfDeActivate2Wfr
+ 121457	RX: 41 06 01 00 
+ 121457	State changed: RfDeActivate2Wfr --> RfDeActivate2Wfn
+ 121458	RX: 61 06 02 00 00 
+ 121458	State changed: RfDeActivate2Wfn --> RfIdleCmd
+ 121459	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+ 121459	State changed: RfIdleCmd --> RfIdleWfr
+ 121461	RX: 41 03 01 00 
+ 121461	State changed: RfIdleWfr --> RfDiscovery
+ 121471	RX: 61 05 17 01 01 02 00 FF 01 0C 44 00 07 04 6C AA 7A 2A 62 80 01 00 00 00 00 00 
+ 121471	State changed: RfDiscovery --> RfPollActive
+ 121472	WR: 21 06 01 00 
+ 121472	State changed: RfPollActive --> RfDeActivate2Wfr
+ 121473	RX: 41 06 01 00 
+ 121473	State changed: RfDeActivate2Wfr --> RfDeActivate2Wfn
+ 121474	RX: 61 06 02 00 00 
+ 121474	State changed: RfDeActivate2Wfn --> RfIdleCmd
+ 121475	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+ 121475	State changed: RfIdleCmd --> RfIdleWfr
+ 121477	RX: 41 03 01 00 
+ 121477	State changed: RfIdleWfr --> RfDiscovery
+ 121487	RX: 61 05 17 01 01 02 00 FF 01 0C 44 00 07 04 6C AA 7A 2A 62 80 01 00 00 00 00 00 
+ 121487	State changed: RfDiscovery --> RfPollActive
+ 121488	WR: 21 06 01 00 
+ 121488	State changed: RfPollActive --> RfDeActivate2Wfr
+ 121489	RX: 41 06 01 00 
+ 121489	State changed: RfDeActivate2Wfr --> RfDeActivate2Wfn
+ 121490	RX: 61 06 02 00 00 
+ 121490	State changed: RfDeActivate2Wfn --> RfIdleCmd
+ 121491	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+ 121491	State changed: RfIdleCmd --> RfIdleWfr
+ 121493	RX: 41 03 01 00 
+ 121493	State changed: RfIdleWfr --> RfDiscovery
+ 121503	RX: 61 05 17 01 01 02 00 FF 01 0C 44 00 07 04 6C AA 7A 2A 62 80 01 00 00 00 00 00 
+ 121503	State changed: RfDiscovery --> RfPollActive
+ 121504	WR: 21 06 01 00 
+ 121504	State changed: RfPollActive --> RfDeActivate2Wfr
+ 121505	RX: 41 06 01 00 
+ 121505	State changed: RfDeActivate2Wfr --> RfDeActivate2Wfn
+ 121506	RX: 61 06 02 00 00 
+ 121506	State changed: RfDeActivate2Wfn --> RfIdleCmd
+ 121507	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+ 121507	State changed: RfIdleCmd --> RfIdleWfr
+ 121509	RX: 41 03 01 00 
+ 121509	State changed: RfIdleWfr --> RfDiscovery
+ 121519	RX: 61 05 17 01 01 02 00 FF 01 0C 44 00 07 04 6C AA 7A 2A 62 80 01 00 00 00 00 00 
+ 121519	State changed: RfDiscovery --> RfPollActive
+ 121520	WR: 21 06 01 00 
+ 121520	State changed: RfPollActive --> RfDeActivate2Wfr
+ 121521	RX: 41 06 01 00 
+ 121521	State changed: RfDeActivate2Wfr --> RfDeActivate2Wfn
+ 121522	RX: 61 06 02 00 00 
+ 121522	State changed: RfDeActivate2Wfn --> RfIdleCmd
+ 121523	WR: 21 03 09 04 00 01 01 01 02 01 06 01 
+ 121523	State changed: RfIdleCmd --> RfIdleWfr
+ 121525	RX: 41 03 01 00 
+ 121525	State changed: RfIdleWfr --> RfDiscovery
+ 121533	RX: 60 07 01 A1 
