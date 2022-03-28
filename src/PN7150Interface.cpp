@@ -178,7 +178,7 @@ uint8_t PN7150Interface::write(uint8_t txBuffer[], uint32_t txBufferLevel) const
 		printf("%02X ", txBuffer[i]);
 	printf("\n");
     //Wire.beginTransmission(I2Caddress);									// Setup I2C to transmit
-    uint32_t nmbrBytesWritten = 0;
+    //uint32_t nmbrBytesWritten = 0;
     //nmbrBytesWritten = Wire.write(txBuffer, txBufferLevel);				// Copy the data into the I2C transmit buffer
     if (HAL_I2C_Master_Transmit(&hi2c1, I2Caddress, txBuffer, txBufferLevel, HAL_MAX_DELAY) == HAL_OK)								// If this worked..
     {

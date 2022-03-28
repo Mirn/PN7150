@@ -24,7 +24,7 @@
 
 #include <stdint.h>                 // Gives us access to uint8_t types etc
 #include "tag.h"                    //
-#include "PN7150Interface.h"        // NCI protocol runs over a hardware interface.
+//#include "PN7150Interface.h"        // NCI protocol runs over a hardware interface.
 
 // ---------------------------------------------------------------------
 // NCI Packet Header Definitions. NCI Specification V1.0 - section 3.4.1
@@ -356,9 +356,9 @@ enum class TagsPresentStatus : uint8_t {
 
 class NCI {
   public:
-    NCI(PN7150Interface &theHardwareInterface);            // Constructor, with mode default set to CardReadwrite
+    NCI();                                                 // Constructor, with mode default set to CardReadwrite
     void initialize();                                     // See NCI specification V1.0, section 4.1 & 4.2
-    void run();                                            // runs the NCI stateMachine
+    void run(bool hasMessage);                             // runs the NCI stateMachine
     void activate();                                       // moves the StateMachine from Idle to Discover and starts the polling
     void deActivate(NciRfDeAcivationMode theMode);         // moves the StateMachine from PollActive or WaitingForHostSelect back into Idle
     NciState getState() const;                             // find out in which state the NCI stateMachine is
@@ -368,7 +368,7 @@ class NCI {
     Tag *getTag(uint8_t index);        // TODO : improve this with 'const' so the Tag properties are read-only
 
   private:
-    PN7150Interface &theHardwareInterface;        // reference to the object handling the hardware interface
+    //PN7150Interface &theHardwareInterface;        // reference to the object handling the hardware interface
 
     NciState theState;                      // keeps track of the state of the NCI stateMachine - FSM
     TagsPresentStatus theTagsStatus;        // how many Tag/Cards are currently present
@@ -378,7 +378,9 @@ class NCI {
 
     uint8_t rxBuffer[MaxPayloadSize + MsgHeaderSize];        // buffer where we store bytes received until they form a complete message
     uint32_t rxMessageLength;                                // length of the last message received. As these are not 0x00 terminated, we need to remember the length
-    uint8_t txBuffer[MaxPayloadSize + MsgHeaderSize];        // buffer where we store the message to be transmitted
+
+    uint8_t  txBuffer[MaxPayloadSize + MsgHeaderSize];        // buffer where we store the message to be transmitted
+    uint32_t txBufferLength;
 
     void sendMessage(uint8_t messageType, uint8_t groupId, uint8_t opcodeId, uint8_t payloadData[], uint8_t payloadLength);
     void sendMessage(uint8_t messageType, uint8_t groupId, uint8_t opcodeId);                // Variant for msg with no payload
@@ -415,5 +417,20 @@ class NCI {
         if (theState == NciState::End                     ) return "End";
         return "???";
     };
+
+    void getRXbuffer(uint8_t **buffer, uint32_t **length)
+    {
+    	*buffer = rxBuffer;
+    	*length = &rxMessageLength;
+    }
+
+    bool getTXmessage(uint8_t **buffer, uint32_t *length)
+    {
+    	*buffer = txBuffer;
+    	*length = txBufferLength;
+    	bool result = (txBufferLength != 0);
+    	txBufferLength = 0;
+    	return result;
+    }
 };
 

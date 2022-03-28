@@ -1,12 +1,15 @@
 #include "nci.h"
+#include "stm32kiss.h"
+#include "usart_mini.h"
 
 static uint32_t millis()
 {
 	return DWT_CYCCNT / (SystemCoreClock / 1000);
 }
 
-NCI::NCI(PN7150Interface& aHardwareInterface) :
-	theHardwareInterface(aHardwareInterface),
+//NCI::NCI(PN7150Interface& aHardwareInterface) :
+NCI::NCI() :
+	//theHardwareInterface(aHardwareInterface),
 	theState(NciState::HwResetRfc),
 	theTagsStatus(TagsPresentStatus::unknown),
 	timeOut(100),
@@ -17,13 +20,13 @@ NCI::NCI(PN7150Interface& aHardwareInterface) :
 }
 
 void NCI::initialize() {
-    theHardwareInterface.initialize();
+    //theHardwareInterface.initialize();
     theState      = NciState::HwResetRfc;        // re-initializing the state, so we can re-initialize at anytime
     theTagsStatus = TagsPresentStatus::unknown;
     nmbrOfTags    = 0;
 }
 
-void NCI::run() {
+void NCI::run(bool hasMessage) {
     switch (theState) {
         case NciState::HwResetRfc:        // after Hardware reset / powerOn
         {
@@ -34,7 +37,7 @@ void NCI::run() {
         } break;
 
         case NciState::HwResetWfr:
-            if (theHardwareInterface.hasMessage()) {
+            if (hasMessage) {
                 getMessage();
                 bool isOk = (6 == rxMessageLength);                                                     // Does the received Msg have the correct lenght ?
                 isOk      = isOk && isMessageType(MsgTypeResponse, GroupIdCore, CORE_RESET_RSP);        // Is the received Msg the correct type ?
@@ -58,7 +61,7 @@ void NCI::run() {
         } break;
 
         case NciState::SwResetWfr:
-            if (theHardwareInterface.hasMessage()) {
+            if (hasMessage) {
                 getMessage();
                 bool isOk = isMessageType(MsgTypeResponse, GroupIdCore, CORE_INIT_RSP);        // Is the received Msg the correct type ?
 
@@ -80,7 +83,7 @@ void NCI::run() {
             break;
 
         case NciState::EnableCustomCommandsWfr:
-            if (theHardwareInterface.hasMessage()) {
+            if (hasMessage) {
                 getMessage();
                 bool isOk = isMessageType(MsgTypeResponse, GroupIdProprietary, NCI_PROPRIETARY_ACT_RSP);        // Is the received Msg the correct type ?
                 isOk      = isOk && (STATUS_OK == rxBuffer[3]);                                                 // Is the received Status code Status_OK ?
@@ -106,7 +109,7 @@ void NCI::run() {
         } break;
 
         case NciState::RfIdleWfr:
-            if (theHardwareInterface.hasMessage()) {
+            if (hasMessage) {
                 getMessage();
                 bool isOk = (4 == rxMessageLength);                                                              // Does the received Msg have the correct lenght ?
                 isOk      = isOk && isMessageType(MsgTypeResponse, GroupIdRfManagement, RF_DISCOVER_RSP);        // Is the received Msg the correct type ?
@@ -125,9 +128,9 @@ void NCI::run() {
             break;
 
         case NciState::RfDiscovery:
-            // TODO : if we have no NTF here, it means no cards are present and we can delete them from the list...
+            // TODO: if we have no NTF here, it means no cards are present and we can delete them from the list...
             // Here we don't check timeouts.. we can wait forever for a TAG/CARD to be presented..
-            if (theHardwareInterface.hasMessage()) {
+            if (hasMessage) {
                 getMessage();
                 if (isMessageType(MsgTypeNotification, GroupIdRfManagement, RF_INTF_ACTIVATED_NTF)) {
                     // When a single tag/card is detected, the PN7150 will immediately activate it and send you this type of notification
@@ -146,13 +149,13 @@ void NCI::run() {
                     theState      = NciState::RfWaitForAllDiscoveries;
                 }
             } else if (isTimeOut()) {
-                theTagsStatus = TagsPresentStatus::noTagsPresent;        // this means no card has been detected for xxx millisecond, so we can conclude that no cards are present
+                theTagsStatus = TagsPresentStatus::noTagsPresent;        // this means no card has been detected for x millisecond, so we can conclude that no cards are present
             }
 
             break;
 
         case NciState::RfWaitForAllDiscoveries:
-            if (theHardwareInterface.hasMessage()) {
+            if (hasMessage) {
                 getMessage();
                 if (isMessageType(MsgTypeNotification, GroupIdRfManagement, RF_DISCOVER_NTF)) {
                     notificationType theNotificationType = (notificationType)rxBuffer[rxBuffer[6] + 7];        // notificationType comes in rxBuffer at the end, = 7 bytes + length of RF Technology Specific parameters which are in rxBuffer[6]
@@ -188,7 +191,7 @@ void NCI::run() {
             break;
 
         case NciState::RfDeActivate1Wfr:
-            if (theHardwareInterface.hasMessage()) {
+            if (hasMessage) {
                 getMessage();
                 if (isMessageType(MsgTypeResponse, GroupIdRfManagement, RF_DEACTIVATE_RSP)) {
                     theState = NciState::RfIdleCmd;
@@ -200,7 +203,7 @@ void NCI::run() {
             break;
 
         case NciState::RfDeActivate2Wfr:
-            if (theHardwareInterface.hasMessage()) {
+            if (hasMessage) {
                 getMessage();
                 if (isMessageType(MsgTypeResponse, GroupIdRfManagement, RF_DEACTIVATE_RSP)) {
                     setTimeOut(10);
@@ -213,7 +216,7 @@ void NCI::run() {
             break;
 
         case NciState::RfDeActivate2Wfn:
-            if (theHardwareInterface.hasMessage()) {
+            if (hasMessage) {
                 getMessage();
                 if (isMessageType(MsgTypeNotification, GroupIdRfManagement, RF_DEACTIVATE_NTF)) {
                     theState = NciState::RfIdleCmd;
@@ -239,7 +242,7 @@ void NCI::activate() {
     NciState tmpState = getState();
     if (tmpState == NciState::RfIdleCmd) {
         uint8_t payloadData[] = {4, NFC_A_PASSIVE_POLL_MODE, 0x01, NFC_B_PASSIVE_POLL_MODE, 0x01, NFC_F_PASSIVE_POLL_MODE, 0x01, NFC_15693_PASSIVE_POLL_MODE, 0x01};
-        // TODO : instead of setting a fixed scanning for these 4 types, we should pass the to be scanned for types as parameters from the ReaderWriter... https://github.com/Strooom/PN7150/issues/1
+        // TODO: instead of setting a fixed scanning for these 4 types, we should pass the to be scanned for types as parameters from the ReaderWriter... https://github.com/Strooom/PN7150/issues/1
         sendMessage(MsgTypeCommand, GroupIdRfManagement, RF_DISCOVER_CMD, payloadData, 9);        //
         setTimeOut(10);                                                                           // we should get a RESPONSE within 10 ms
         theState = NciState::RfIdleWfr;                                                           // move to next state, waiting for Response
@@ -289,13 +292,23 @@ Tag* NCI::getTag(uint8_t index) {
 }
 
 void NCI::sendMessage(uint8_t messageType, uint8_t groupId, uint8_t opcodeId) {
+	if (txBufferLength != 0) {
+		printf("Error: NCI::sendMessage: (txBufferLength != 0)\n");
+	}
+
     txBuffer[0] = (messageType | groupId) & 0xEF;         // put messageType and groupId in first byte, Packet Boundary Flag is always 0
     txBuffer[1] = opcodeId & 0x3F;                        // put opcodeId in second byte, clear Reserved for Future Use (RFU) bits
     txBuffer[2] = 0x00;                                   // payloadLength goes in third byte
-    (void)theHardwareInterface.write(txBuffer, 3);        // TODO :  could make this more robust by checking the return value and go into error is write did not succees
+    txBufferLength = 3;                                   // TODO:  could make this more robust by checking the return value and go into error is write did not succees
+
+    //(void)theHardwareInterface.write(txBuffer, 3);
 }
 
 void NCI::sendMessage(uint8_t messageType, uint8_t groupId, uint8_t opcodeId, uint8_t payloadData[], uint8_t payloadLength) {
+	if (txBufferLength != 0) {
+		printf("Error: NCI::sendMessage_payloadData: (txBufferLength != 0)\n");
+	}
+
     txBuffer[0] = (messageType | groupId) & 0xEF;                   // put messageType and groupId in first byte, Packet Boundary Flag is always 0
     txBuffer[1] = opcodeId & 0x3F;                                  // put opcodeId in second byte, clear Reserved for Future Use (RFU) bits
     txBuffer[2] = payloadLength;                                    // payloadLength goes in third byte
@@ -303,11 +316,12 @@ void NCI::sendMessage(uint8_t messageType, uint8_t groupId, uint8_t opcodeId, ui
     {
         txBuffer[index + 3] = payloadData[index];
     }
-    (void)theHardwareInterface.write(txBuffer, 3 + payloadLength);        // TODO :  could make this more robust by checking the return value and go into error is write did not succees
+    txBufferLength = 3 + payloadLength;        // TODO:  could make this more robust by checking the return value and go into error is write did not succees
+    //(void)theHardwareInterface.write(txBuffer, 3 + payloadLength);
 }
 
 void NCI::getMessage() {
-    rxMessageLength = theHardwareInterface.read(rxBuffer);
+    //rxMessageLength = theHardwareInterface.read(rxBuffer);
 }
 
 bool NCI::isMessageType(uint8_t messageType, uint8_t groupId, uint8_t opcodeId) const {
@@ -364,6 +378,8 @@ bool NCI::newTagPresent() const {        // returns true only if a new tag is pr
     return (TagsPresentStatus::newTagPresent == theTagsStatus);
 }
 
+#include "PN7150Interface.h"
+
 uint32_t nci_tick = 0;
 
 typedef struct {
@@ -373,14 +389,21 @@ typedef struct {
 
 extern "C" void nci_test()
 {
-	PN7150Interface pn7150;
-	NCI nci(pn7150);
+	uint8_t *rxbuf = nullptr;
+	uint8_t *txbuf = nullptr;
+	uint32_t *rxlen = nullptr;
+	uint32_t  txlen = 0;
 
+	PN7150Interface pn7150;
+	NCI nci;
+
+	pn7150.initialize();
 	nci.initialize();
 	nci.activate();
+	nci.getRXbuffer(&rxbuf, &rxlen);
 
 	const char *old_state = "non inited";
-	uint8_t tags_cnt = 0;
+	//uint8_t tags_cnt = 0;
 
 	const tTagInfo taginfo[3] = {
 			{{0x04, ????????????????????????????? 0x80}, "Mijica",},
@@ -389,9 +412,10 @@ extern "C" void nci_test()
 	};
 
 	while (1) {
-		nci.run();
-		uint8_t *txbuf = nullptr;
-		uint32_t txlen = 0;
+		bool hasMessage = pn7150.hasMessage();
+		if (hasMessage)
+			*rxlen = pn7150.read(rxbuf);
+		nci.run(hasMessage);
 		if (nci.getTXmessage(&txbuf, &txlen))
 			pn7150.write(txbuf, txlen);
 
