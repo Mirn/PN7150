@@ -1,7 +1,5 @@
 #include "nci.h"
 
-uint32_t nci_tick = 0;
-
 static uint32_t millis()
 {
 	return DWT_CYCCNT / (SystemCoreClock / 1000);
@@ -11,9 +9,9 @@ NCI::NCI(PN7150Interface& aHardwareInterface) :
 	theHardwareInterface(aHardwareInterface),
 	theState(NciState::HwResetRfc),
 	theTagsStatus(TagsPresentStatus::unknown),
-	rxMessageLength(0),
 	timeOut(100),
 	timeOutStartTime(0),
+	rxMessageLength(0),
 	txBufferLength(0)
 {
 }
@@ -365,6 +363,8 @@ void NCI::saveTag(uint8_t msgType) {
 bool NCI::newTagPresent() const {        // returns true only if a new tag is present
     return (TagsPresentStatus::newTagPresent == theTagsStatus);
 }
+
+uint32_t nci_tick = 0;
 
 typedef struct {
 	uint8_t tag[7];
