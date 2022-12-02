@@ -96,7 +96,7 @@ impl TmlTrait for Tml {
             if (cnt == base_len) && (extra > 0) {
                 let res = self.i2c.read(&mut buffer[base_len .. (base_len + extra)]);
                 if res.is_ok() {
-                    return Ok(res.unwrap() + 3);
+                    return Ok(res.unwrap() + base_len);
                 } else {
                     return Err(TmlError::Read);
                 }
