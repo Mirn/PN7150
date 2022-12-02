@@ -85,12 +85,16 @@ impl TmlTrait for Tml {
             return Err(TmlError::Timeout);
         }
 
-        let res = self.i2c.read(&mut buffer[0..3]);
+        let base_len = 3;
+        let extra_offs = 12;
+        assert!(extra_offs < base_len);
+
+        let res = self.i2c.read(&mut buffer[0 .. base_len]);
         if res.is_ok() {
             let cnt = res.unwrap();
-            let extra = buffer[2] as usize;
-            if (cnt == 3) && (extra > 0) {
-                let res = self.i2c.read(&mut buffer[3..(3+extra)]);
+            let extra = buffer[extra_offs] as usize;
+            if (cnt == base_len) && (extra > 0) {
+                let res = self.i2c.read(&mut buffer[base_len .. (base_len + extra)]);
                 if res.is_ok() {
                     return Ok(res.unwrap() + 3);
                 } else {
