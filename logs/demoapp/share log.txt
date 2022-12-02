@@ -1,0 +1,235 @@
+#########################################################################################
+##                                       NFC demo                                      ##
+#########################################################################################
+##                                 Share mode activated                                ##
+#########################################################################################
+                              ... press enter to quit ...
+
+2022:11:24-16:31:58.655	NxpHal:     Entering phNxpNciHal_init_monitor
+2022:11:24-16:31:58.655	NxpHal:     Returning with SUCCESS
+2022:11:24-16:31:58.656	NxpTml:     System already has pin /sys/class/gpio/gpio4
+2022:11:24-16:31:58.656	NxpTml:     System already has pin /sys/class/gpio/gpio5
+2022:11:24-16:31:58.857	NxpHal:     thread started
+2022:11:24-16:31:58.857	NxpTml:     _i2c_write() errno : 79
+2022:11:24-16:31:58.857	NxpTml:     PN54X - Error in I2C Write.....
+2022:11:24-16:31:58.857	NxpHal:     write error status = 0x1ff
+2022:11:24-16:31:58.857	NxpHal:     write_unlocked failed - PN54X Maybe in Standby Mode - Retry
+2022:11:24-16:31:58.859	NxpTml:     _i2c_write() errno : 79
+2022:11:24-16:31:58.859	NxpTml:     PN54X - Error in I2C Write.....
+2022:11:24-16:31:58.859	NxpHal:     write error status = 0x1ff
+2022:11:24-16:31:58.859	NxpHal:     write_unlocked failed - PN54X Maybe in Standby Mode - Retry
+2022:11:24-16:31:58.860	NxpNciX:     len =   4 > 20000101
+2022:11:24-16:31:58.860	NxpHal:     write successful status = 0x0
+2022:11:24-16:31:58.861	NxpHal:     Response timer started
+2022:11:24-16:31:58.861	NxpHal:     Waiting after ext cmd sent
+2022:11:24-16:31:58.887	NxpNciR:     len =   6 > 400003001101
+2022:11:24-16:31:58.887	NxpHal:     read successful status = 0x0
+2022:11:24-16:31:58.887	NxpHal:     Response timer stopped
+2022:11:24-16:31:58.887	NxpHal:     Checking response
+2022:11:24-16:31:58.888	NxpNciX:     len =   3 > 200100
+2022:11:24-16:31:58.888	NxpHal:     write successful status = 0x0
+2022:11:24-16:31:58.888	NxpHal:     Response timer started
+2022:11:24-16:31:58.888	NxpHal:     Waiting after ext cmd sent
+2022:11:24-16:31:58.891	NxpNciR:     len =  28 > 40011900031E030008000102038081828302D002FF020004881001A0
+2022:11:24-16:31:58.891	NxpHal:     read successful status = 0x0
+2022:11:24-16:31:58.891	NxpHal:     NxpNci> FW Version: 10.1.a0
+2022:11:24-16:31:58.891	NxpHal:     phNxpNciHal_deriveChipType HwVersion : 0x88
+2022:11:24-16:31:58.892	NxpHal:     phNxpNciHal_deriveChipType NxpNci > Product : PN548C2
+2022:11:24-16:31:58.892	NxpHal:     Response timer stopped
+2022:11:24-16:31:58.892	NxpHal:     Checking response
+2022:11:24-16:31:58.893	NxpNciX:     len =   6 > 20030301A005
+2022:11:24-16:31:58.893	NxpHal:     write successful status = 0x0
+2022:11:24-16:31:58.893	NxpHal:     Response timer started
+2022:11:24-16:31:58.893	NxpHal:     Waiting after ext cmd sent
+2022:11:24-16:31:58.894	NxpNciR:     len =   9 > 4003060001A0050100
+2022:11:24-16:31:58.894	NxpHal:     read successful status = 0x0
+2022:11:24-16:31:58.895	NxpHal:     phNxpNciHal_print_res_status: response status =STATUS_OK
+2022:11:24-16:31:58.895	NxpHal:     Response timer stopped
+2022:11:24-16:31:58.895	NxpHal:     Checking response
+2022:11:24-16:31:58.895	NxpHal:     i2c_fragmentation_status existing
+2022:11:24-16:31:58.895	NxpHal:     FW version for FW file = 0x0
+2022:11:24-16:31:58.895	NxpHal:     FW version from device = 0x1001a0
+2022:11:24-16:31:58.896	NxpNciX:     len =   4 > 20000101
+2022:11:24-16:31:58.896	NxpHal:     write successful status = 0x0
+2022:11:24-16:31:58.899	NxpNciR:     len =   6 > 400003001101
+2022:11:24-16:31:58.899	NxpHal:     read successful status = 0x0
+2022:11:24-16:31:58.899	NxpNciX:     len =   3 > 200100
+2022:11:24-16:31:58.900	NxpHal:     write successful status = 0x0
+2022:11:24-16:31:58.902	NxpNciR:     len =  28 > 40011900031E030008000102038081828302D002FF020004881001A0
+2022:11:24-16:31:58.903	NxpHal:     read successful status = 0x0
+2022:11:24-16:31:58.903	NxpHal:     NxpNci> FW Version: 10.1.a0
+2022:11:24-16:31:58.903	NxpHal:     phNxpNciHal_deriveChipType HwVersion : 0x88
+2022:11:24-16:31:58.903	NxpHal:     phNxpNciHal_deriveChipType NxpNci > Product : PN548C2
+2022:11:24-16:31:58.903	NxpNciX:     len =   3 > 2F0200
+2022:11:24-16:31:58.903	NxpHal:     write successful status = 0x0
+2022:11:24-16:31:58.903	NxpHal:     Response timer started
+2022:11:24-16:31:58.904	NxpHal:     Waiting after ext cmd sent
+2022:11:24-16:31:58.904	NxpNciR:     len =   8 > 4F02050000009F97
+2022:11:24-16:31:58.905	NxpHal:     read successful status = 0x0
+2022:11:24-16:31:58.905	NxpHal:     Response timer stopped
+2022:11:24-16:31:58.905	NxpHal:     Checking response
+2022:11:24-16:31:58.906	NxpNciX:     len =  10 > 20030703A002A003A004
+2022:11:24-16:31:58.906	NxpHal:     write successful status = 0x0
+2022:11:24-16:31:58.906	NxpHal:     Response timer started
+2022:11:24-16:31:58.906	NxpHal:     Waiting after ext cmd sent
+2022:11:24-16:31:58.909	NxpNciR:     len =  17 > 40030E0003A0020101A0030108A0040101
+2022:11:24-16:31:58.909	NxpHal:     read successful status = 0x0
+2022:11:24-16:31:58.909	NxpHal:     phNxpNciHal_print_res_status: response status =STATUS_OK
+2022:11:24-16:31:58.909	NxpHal:     Response timer stopped
+2022:11:24-16:31:58.909	NxpHal:     Checking response
+2022:11:24-16:31:58.909	NxpHal:     phNxpNciHal_check_factory_reset file not present = /data/nfc/nfaStorage.bin1
+2022:11:24-16:31:58.912	NxpNciX:     len =  26 > 20021702A0EA08FFFFFFFFFFFFFFFFA0EB08FFFFFFFFFFFFFFFF
+2022:11:24-16:31:58.912	NxpHal:     write successful status = 0x0
+2022:11:24-16:31:58.913	NxpHal:     Response timer started
+2022:11:24-16:31:58.913	NxpHal:     Waiting after ext cmd sent
+2022:11:24-16:31:58.913	NxpNciR:     len =   5 > 4002020000
+2022:11:24-16:31:58.915	NxpHal:     read successful status = 0x0
+2022:11:24-16:31:58.915	NxpHal:     phNxpNciHal_print_res_status: response status =STATUS_OK
+2022:11:24-16:31:58.915	NxpHal:     Response timer stopped
+2022:11:24-16:31:58.915	NxpHal:     Checking response
+2022:11:24-16:31:58.916	NxpNciX:     len =   8 > 20020501A0440100
+2022:11:24-16:31:58.916	NxpHal:     write successful status = 0x0
+2022:11:24-16:31:58.916	NxpHal:     Response timer started
+2022:11:24-16:31:58.916	NxpHal:     Waiting after ext cmd sent
+2022:11:24-16:31:58.917	NxpNciR:     len =   5 > 4002020000
+2022:11:24-16:31:58.917	NxpHal:     read successful status = 0x0
+2022:11:24-16:31:58.918	NxpHal:     phNxpNciHal_print_res_status: response status =STATUS_OK
+2022:11:24-16:31:58.918	NxpHal:     Response timer stopped
+2022:11:24-16:31:58.918	NxpHal:     Checking response
+2022:11:24-16:31:58.918	NxpNciX:     len =   4 > 2F000100
+2022:11:24-16:31:58.918	NxpHal:     write successful status = 0x0
+2022:11:24-16:31:58.918	NxpHal:     Response timer started
+2022:11:24-16:31:58.919	NxpHal:     Waiting after ext cmd sent
+2022:11:24-16:31:58.922	NxpNciR:     len =   4 > 4F000100
+2022:11:24-16:31:58.922	NxpHal:     read successful status = 0x0
+2022:11:24-16:31:58.922	NxpHal:     Response timer stopped
+2022:11:24-16:31:58.922	NxpHal:     Checking response
+2022:11:24-16:31:58.927	NxpNciX:     len =  46 > 20022B0D2801002101003001083101033304040302015401065001025B010060010E80010181010182010E180101
+2022:11:24-16:31:58.927	NxpHal:     write successful status = 0x0
+2022:11:24-16:31:58.927	NxpHal:     Response timer started
+2022:11:24-16:31:58.927	NxpHal:     Waiting after ext cmd sent
+2022:11:24-16:31:58.948	NxpNciR:     len =   5 > 4002020000
+2022:11:24-16:31:58.948	NxpHal:     read successful status = 0x0
+2022:11:24-16:31:58.948	NxpHal:     phNxpNciHal_print_res_status: response status =STATUS_OK
+2022:11:24-16:31:58.948	NxpHal:     Response timer stopped
+2022:11:24-16:31:58.948	NxpHal:     Checking response
+2022:11:24-16:31:58.949	NxpNciX:     len =  10 > 21010700010103000105
+2022:11:24-16:31:58.949	NxpHal:     write successful status = 0x0
+2022:11:24-16:31:58.949	NxpHal:     Response timer started
+2022:11:24-16:31:58.949	NxpHal:     Waiting after ext cmd sent
+2022:11:24-16:31:58.953	NxpNciR:     len =   4 > 41010100
+2022:11:24-16:31:58.953	NxpHal:     read successful status = 0x0
+2022:11:24-16:31:58.953	NxpHal:     Response timer stopped
+2022:11:24-16:31:58.953	NxpHal:     Checking response
+2022:11:24-16:31:58.955	NxpNciX:     len =  16 > 21000D04040302050303800180030201
+2022:11:24-16:31:58.955	NxpHal:     write successful status = 0x0
+2022:11:24-16:31:58.971	NxpNciR:     len =   4 > 41000100
+2022:11:24-16:31:58.971	NxpHal:     read successful status = 0x0
+2022:11:24-16:31:58.972	NxpNciX:     len =   4 > 22000101
+2022:11:24-16:31:58.972	NxpHal:     write successful status = 0x0
+2022:11:24-16:31:58.975	NxpNciR:     len =   5 > 4200020001
+2022:11:24-16:31:58.976	NxpHal:     read successful status = 0x0
+2022:11:24-16:31:58.977	NxpNciR:     len =   8 > 6200050101010100
+2022:11:24-16:31:58.977	NxpHal:     read successful status = 0x0
+2022:11:24-16:31:58.979	NxpNciX:     len =   9 > 200406030101020101
+2022:11:24-16:31:58.979	NxpHal:     write successful status = 0x0
+2022:11:24-16:31:58.980	NxpNciR:     len =   7 > 40040400FF0103
+2022:11:24-16:31:58.980	NxpHal:     read successful status = 0x0
+2022:11:24-16:31:58.981	NxpNciX:     len =   5 > 0300028103
+2022:11:24-16:31:58.981	NxpHal:     write successful status = 0x0
+2022:11:24-16:31:58.982	NxpNciR:     len =   6 > 600603010301
+2022:11:24-16:31:58.982	NxpHal:     read successful status = 0x0
+2022:11:24-16:31:58.983	NxpNciR:     len =   5 > 0300028180
+2022:11:24-16:31:58.983	NxpHal:     read successful status = 0x0
+2022:11:24-16:31:58.985	NxpHal:     > Going through workaround - set host list
+2022:11:24-16:31:58.985	NxpHal:     > Going through workaround - set host list - END
+2022:11:24-16:31:58.986	NxpNciX:     len =   8 > 03000581010302C0
+2022:11:24-16:31:58.986	NxpHal:     write successful status = 0x0
+2022:11:24-16:31:58.987	NxpNciR:     len =   6 > 600603010301
+2022:11:24-16:31:58.987	NxpHal:     read successful status = 0x0
+2022:11:24-16:31:58.988	NxpNciR:     len =   5 > 0300028180
+2022:11:24-16:31:58.988	NxpHal:     read successful status = 0x0
+2022:11:24-16:31:58.989	NxpNciX:     len =  14 > 03000B810101A6661100A2661100
+2022:11:24-16:31:58.990	NxpHal:     write successful status = 0x0
+2022:11:24-16:31:58.996	NxpNciR:     len =   6 > 600603010301
+2022:11:24-16:31:58.996	NxpHal:     read successful status = 0x0
+2022:11:24-16:31:58.997	NxpNciR:     len =   5 > 0300028180
+2022:11:24-16:31:58.997	NxpHal:     read successful status = 0x0
+2022:11:24-16:31:58.998	NxpNciX:     len =   5 > 2201020101
+2022:11:24-16:31:58.998	NxpHal:     write successful status = 0x0
+2022:11:24-16:31:59.002	NxpNciR:     len =   4 > 42010100
+2022:11:24-16:31:59.002	NxpHal:     read successful status = 0x0
+2022:11:24-16:31:59.007	NxpNciR:     len =   8 > 6200050202018000
+2022:11:24-16:31:59.007	NxpHal:     read successful status = 0x0
+2022:11:24-16:31:59.150	NxpNciX:     len =   6 > 030003810204
+2022:11:24-16:31:59.150	NxpHal:     write successful status = 0x0
+2022:11:24-16:31:59.151	NxpNciR:     len =   6 > 600603010301
+2022:11:24-16:31:59.151	NxpHal:     read successful status = 0x0
+2022:11:24-16:31:59.152	NxpNciR:     len =   6 > 030003818000
+2022:11:24-16:31:59.152	NxpHal:     read successful status = 0x0
+2022:11:24-16:31:59.153	NxpFunc:    initialize:HOST_LISTEN_TECH_MASK=7;
+2022:11:24-16:31:59.156	NxpNciX:     len =  25 > 21011600040003000102010300410401030041A00103000105
+2022:11:24-16:31:59.156	NxpHal:     write successful status = 0x0
+2022:11:24-16:31:59.162	NxpNciR:     len =   4 > 41010100
+2022:11:24-16:31:59.162	NxpHal:     read successful status = 0x0
+2022:11:24-16:31:59.163	NxpFunc:    RoutingManager::nfaEeCallback: unknown event=9 ????
+2022:11:24-16:31:59.256	NxpNciX:     len =  26 > 20021701291446666D010111020207FF03020003040164070103
+2022:11:24-16:31:59.256	NxpHal:     write successful status = 0x0
+2022:11:24-16:31:59.263	NxpNciR:     len =   5 > 4002020000
+2022:11:24-16:31:59.263	NxpHal:     read successful status = 0x0
+2022:11:24-16:31:59.263	NxpHal:     phNxpNciHal_print_res_status: response status =STATUS_OK
+2022:11:24-16:31:59.265	NxpNciX:     len =  19 > 20021005320120300104310100380101500100
+2022:11:24-16:31:59.265	NxpHal:     write successful status = 0x0
+2022:11:24-16:31:59.281	NxpNciR:     len =   5 > 4002020000
+2022:11:24-16:31:59.281	NxpHal:     read successful status = 0x0
+2022:11:24-16:31:59.281	NxpHal:     phNxpNciHal_print_res_status: response status =STATUS_OK
+2022:11:24-16:31:59.282	NxpNciX:     len =   8 > 200205010002F401
+2022:11:24-16:31:59.283	NxpHal:     write successful status = 0x0
+2022:11:24-16:31:59.287	NxpNciR:     len =   5 > 4002020000
+2022:11:24-16:31:59.287	NxpHal:     read successful status = 0x0
+2022:11:24-16:31:59.287	NxpHal:     phNxpNciHal_print_res_status: response status =STATUS_OK
+2022:11:24-16:31:59.287	NxpHal:     > Polling Loop Started
+2022:11:24-16:31:59.289	NxpNciX:     len =  22 > 21031309000101010201030105018001810106017001
+2022:11:24-16:31:59.289	NxpHal:     write successful status = 0x0
+2022:11:24-16:31:59.292	NxpNciR:     len =   4 > 41030100
+2022:11:24-16:31:59.292	NxpHal:     read successful status = 0x0
+Waiting for a Tag/Device...
+
+2022:11:24-16:32:02.005	NxpNciR:     len =   4 > 61070101
+2022:11:24-16:32:02.006	NxpHal:     read successful status = 0x0
+2022:11:24-16:32:02.038	NxpNciR:     len =   4 > 61070100
+2022:11:24-16:32:02.038	NxpHal:     read successful status = 0x0
+2022:11:24-16:32:02.043	NxpNciR:     len =   4 > 61070101
+2022:11:24-16:32:02.043	NxpHal:     read successful status = 0x0
+2022:11:24-16:32:02.144	NxpNciR:     len =  15 > 61050C01020480FF01008000000180
+2022:11:24-16:32:02.144	NxpHal:     read successful status = 0x0
+2022:11:24-16:32:02.144	NxpHal:     NxpNci: RF Interface = ISO-DEP
+2022:11:24-16:32:02.144	NxpHal:     NxpNci: Protocol = ISO-DEP
+2022:11:24-16:32:02.144	NxpHal:     NxpNci: Mode = A Passive Listen
+2022:11:24-16:32:02.148	NxpNciR:     len =   5 > 6106020101
+2022:11:24-16:32:02.148	NxpHal:     read successful status = 0x0
+2022:11:24-16:32:02.150	NxpNciR:     len =   5 > 6106020302
+2022:11:24-16:32:02.150	NxpHal:     read successful status = 0x0
+2022:11:24-16:32:02.151	NxpNciR:     len =   4 > 61070100
+2022:11:24-16:32:02.151	NxpHal:     read successful status = 0x0
+exit
+2022:11:24-16:32:07.456	NxpNciX:     len =   4 > 21060100
+2022:11:24-16:32:07.456	NxpHal:     write successful status = 0x0
+2022:11:24-16:32:07.457	NxpNciR:     len =   4 > 41060100
+2022:11:24-16:32:07.457	NxpHal:     read successful status = 0x0
+2022:11:24-16:32:07.459	NxpNciX:     len =  10 > 20020702310100380101
+2022:11:24-16:32:07.459	NxpHal:     write successful status = 0x0
+2022:11:24-16:32:07.460	NxpNciR:     len =   5 > 4002020000
+2022:11:24-16:32:07.460	NxpHal:     read successful status = 0x0
+2022:11:24-16:32:07.460	NxpHal:     phNxpNciHal_print_res_status: response status =STATUS_OK
+2022:11:24-16:32:07.460	NxpHal:     > Polling Loop Started
+2022:11:24-16:32:07.462	NxpNciX:     len =  22 > 21031309000101010201030105018001810106017001
+2022:11:24-16:32:07.462	NxpHal:     write successful status = 0x0
+2022:11:24-16:32:07.465	NxpNciR:     len =   4 > 41030100
+2022:11:24-16:32:07.465	NxpHal:     read successful status = 0x0
+2022:11:24-16:32:07.466	NxpNciX:     len =   4 > 21060100
+2022:11:24-16:32:07.466	NxpHal:     write successful status = 0x0
+2022:11:24-16:32:07.470	NxpNciR:     len =   4 > 41060100
+2022:11:24-16:32:07.470	NxpHal:     read successful status = 0x0
+Leaving ...
+

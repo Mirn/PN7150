@@ -1,0 +1,353 @@
+#########################################################################################
+##                                       NFC demo                                      ##
+#########################################################################################
+##                                 Poll mode activated                                 ##
+#########################################################################################
+                              ... press enter to quit ...
+
+NxpHal:     Entering phNxpNciHal_init_monitor
+NxpHal:     Returning with SUCCESS
+NxpTml:     System already has pin /sys/class/gpio/gpio4
+NxpTml:     System already has pin /sys/class/gpio/gpio5
+NxpHal:     thread started
+NxpTml:     _i2c_write() errno : 79
+NxpTml:     PN54X - Error in I2C Write.....
+NxpHal:     write error status = 0x1ff
+NxpHal:     write_unlocked failed - PN54X Maybe in Standby Mode - Retry
+NxpNciX:     len =   4 > 20000101
+NxpHal:     write successful status = 0x0
+NxpHal:     Response timer started
+NxpHal:     Waiting after ext cmd sent
+NxpNciR:     len =   6 > 400003001101
+NxpHal:     read successful status = 0x0
+NxpHal:     Response timer stopped
+NxpHal:     Checking response
+NxpNciX:     len =   3 > 200100
+NxpHal:     write successful status = 0x0
+NxpHal:     Response timer started
+NxpHal:     Waiting after ext cmd sent
+NxpNciR:     len =  28 > 40011900031E030008000102038081828302D002FF020004881001A0
+NxpHal:     read successful status = 0x0
+NxpHal:     NxpNci> FW Version: 10.1.a0
+NxpHal:     phNxpNciHal_deriveChipType HwVersion : 0x88
+NxpHal:     phNxpNciHal_deriveChipType NxpNci > Product : PN548C2
+NxpHal:     Response timer stopped
+NxpHal:     Checking response
+NxpNciX:     len =   6 > 20030301A005
+NxpHal:     write successful status = 0x0
+NxpHal:     Response timer started
+NxpHal:     Waiting after ext cmd sent
+NxpNciR:     len =   9 > 4003060001A0050100
+NxpHal:     read successful status = 0x0
+NxpHal:     phNxpNciHal_print_res_status: response status =STATUS_OK
+NxpHal:     Response timer stopped
+NxpHal:     Checking response
+NxpHal:     i2c_fragmentation_status existing
+NxpHal:     FW version for FW file = 0x0
+NxpHal:     FW version from device = 0x1001a0
+NxpNciX:     len =   4 > 20000101
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   6 > 400003001101
+NxpHal:     read successful status = 0x0
+NxpNciX:     len =   3 > 200100
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =  28 > 40011900031E030008000102038081828302D002FF020004881001A0
+NxpHal:     read successful status = 0x0
+NxpHal:     NxpNci> FW Version: 10.1.a0
+NxpHal:     phNxpNciHal_deriveChipType HwVersion : 0x88
+NxpHal:     phNxpNciHal_deriveChipType NxpNci > Product : PN548C2
+NxpNciX:     len =   3 > 2F0200
+NxpHal:     write successful status = 0x0
+NxpHal:     Response timer started
+NxpHal:     Waiting after ext cmd sent
+NxpNciR:     len =   8 > 4F02050000009F97
+NxpHal:     read successful status = 0x0
+NxpHal:     Response timer stopped
+NxpHal:     Checking response
+NxpNciX:     len =  10 > 20030703A002A003A004
+NxpHal:     write successful status = 0x0
+NxpHal:     Response timer started
+NxpHal:     Waiting after ext cmd sent
+NxpNciR:     len =  17 > 40030E0003A0020101A0030108A0040101
+NxpHal:     read successful status = 0x0
+NxpHal:     phNxpNciHal_print_res_status: response status =STATUS_OK
+NxpHal:     Response timer stopped
+NxpHal:     Checking response
+NxpHal:     phNxpNciHal_check_factory_reset file not present = /data/nfc/nfaStorage.bin1
+NxpNciX:     len =  26 > 20021702A0EA08FFFFFFFFFFFFFFFFA0EB08FFFFFFFFFFFFFFFF
+NxpHal:     write successful status = 0x0
+NxpHal:     Response timer started
+NxpHal:     Waiting after ext cmd sent
+NxpNciR:     len =   5 > 4002020000
+NxpHal:     read successful status = 0x0
+NxpHal:     phNxpNciHal_print_res_status: response status =STATUS_OK
+NxpHal:     Response timer stopped
+NxpHal:     Checking response
+NxpNciX:     len =   8 > 20020501A0440100
+NxpHal:     write successful status = 0x0
+NxpHal:     Response timer started
+NxpHal:     Waiting after ext cmd sent
+NxpNciR:     len =   5 > 4002020000
+NxpHal:     read successful status = 0x0
+NxpHal:     phNxpNciHal_print_res_status: response status =STATUS_OK
+NxpHal:     Response timer stopped
+NxpHal:     Checking response
+NxpNciX:     len =   4 > 2F000100
+NxpHal:     write successful status = 0x0
+NxpHal:     Response timer started
+NxpHal:     Waiting after ext cmd sent
+NxpNciR:     len =   4 > 4F000100
+NxpHal:     read successful status = 0x0
+NxpHal:     Response timer stopped
+NxpHal:     Checking response
+NxpNciX:     len =  46 > 20022B0D2801002101003001083101033304040302015401065001025B010060010E80010181010182010E180101
+NxpHal:     write successful status = 0x0
+NxpHal:     Response timer started
+NxpHal:     Waiting after ext cmd sent
+NxpNciR:     len =   5 > 4002020000
+NxpHal:     read successful status = 0x0
+NxpHal:     phNxpNciHal_print_res_status: response status =STATUS_OK
+NxpHal:     Response timer stopped
+NxpHal:     Checking response
+NxpNciX:     len =  10 > 21010700010103000105
+NxpHal:     write successful status = 0x0
+NxpHal:     Response timer started
+NxpHal:     Waiting after ext cmd sent
+NxpNciR:     len =   4 > 41010100
+NxpHal:     read successful status = 0x0
+NxpHal:     Response timer stopped
+NxpHal:     Checking response
+NxpNciX:     len =  16 > 21000D04040302050303800180030201
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   4 > 41000100
+NxpHal:     read successful status = 0x0
+NxpNciX:     len =   4 > 22000101
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   5 > 4200020001
+NxpHal:     read successful status = 0x0
+NxpNciR:     len =   8 > 6200050101010100
+NxpHal:     read successful status = 0x0
+NxpNciX:     len =   9 > 200406030101020101
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   7 > 40040400FF0103
+NxpHal:     read successful status = 0x0
+NxpNciX:     len =   5 > 0300028103
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   6 > 600603010301
+NxpHal:     read successful status = 0x0
+NxpNciR:     len =   5 > 0300028180
+NxpHal:     read successful status = 0x0
+NxpHal:     > Going through workaround - set host list
+NxpHal:     > Going through workaround - set host list - END
+NxpNciX:     len =   8 > 03000581010302C0
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   6 > 600603010301
+NxpHal:     read successful status = 0x0
+NxpNciR:     len =   5 > 0300028180
+NxpHal:     read successful status = 0x0
+NxpNciX:     len =  14 > 03000B81010153BA0F0050BA0F00
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   6 > 600603010301
+NxpHal:     read successful status = 0x0
+NxpNciR:     len =   5 > 0300028180
+NxpHal:     read successful status = 0x0
+NxpNciX:     len =   5 > 2201020101
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   4 > 42010100
+NxpHal:     read successful status = 0x0
+NxpNciR:     len =   8 > 6200050202018000
+NxpHal:     read successful status = 0x0
+NxpNciX:     len =   6 > 030003810204
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   6 > 600603010301
+NxpHal:     read successful status = 0x0
+NxpNciR:     len =   6 > 030003818000
+NxpHal:     read successful status = 0x0
+NxpFunc:    initialize:HOST_LISTEN_TECH_MASK=7;
+NxpFunc:    RoutingManager::nfaEeCallback: unknown event=9 ????
+NxpNciX:     len =  26 > 20021701291446666D010111020207FF03020003040164070103
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   5 > 4002020000
+NxpHal:     read successful status = 0x0
+NxpHal:     phNxpNciHal_print_res_status: response status =STATUS_OK
+NxpNciX:     len =  19 > 20021005320120300104310100380101500100
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   5 > 4002020000
+NxpHal:     read successful status = 0x0
+NxpHal:     phNxpNciHal_print_res_status: response status =STATUS_OK
+NxpNciX:     len =   8 > 200205010002F401
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   5 > 4002020000
+NxpHal:     read successful status = 0x0
+NxpHal:     phNxpNciHal_print_res_status: response status =STATUS_OK
+NxpHal:     > Polling Loop Started
+NxpNciX:     len =  22 > 21031309000101010201030105018001810106017001
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   4 > 41030100
+NxpHal:     read successful status = 0x0
+NxpNciX:     len =   4 > 21060100
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   4 > 41060100
+NxpHal:     read successful status = 0x0
+NxpNciX:     len =  26 > 20021701291446666D010111020207FF03020013040164070103
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   5 > 4002020000
+NxpHal:     read successful status = 0x0
+NxpHal:     phNxpNciHal_print_res_status: response status =STATUS_OK
+NxpNciX:     len =  29 > 20021A02611446666D010111020207FF03020013040164070103600107
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   5 > 4002020000
+NxpHal:     read successful status = 0x0
+NxpHal:     phNxpNciHal_print_res_status: response status =STATUS_OK
+NxpNciX:     len =  16 > 20020D04320160310100380101500102
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   5 > 4002020000
+NxpHal:     read successful status = 0x0
+NxpHal:     phNxpNciHal_print_res_status: response status =STATUS_OK
+NxpHal:     > Polling Loop Started
+NxpNciX:     len =  28 > 2103190C000101010201030105018001810182018301850106017001
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   4 > 41030100
+NxpHal:     read successful status = 0x0
+Waiting for a Tag/Device...
+
+NxpNciR:     len =  26 > 61051701010200FF010C440007046CAA7A2A6280010000000000
+NxpHal:     read successful status = 0x0
+NxpHal:     NxpNci: RF Interface = Frame RF
+NxpHal:     NxpNci: Protocol = T2T
+NxpHal:     NxpNci: Mode = A Passive Poll
+	NFC Tag Found
+
+        Type :         'Type A - Mifare Ul'
+        NFCID1 :    	'04 6C AA 7A 2A 62 80 '
+NxpNciX:     len =   5 > 0000023000
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   6 > 600603010001
+NxpHal:     read successful status = 0x0
+NxpNciR:     len =  20 > 000011046CAA4A7A2A6280B2480000E110120000
+NxpHal:     read successful status = 0x0
+NxpNciX:     len =   5 > 0000023000
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   6 > 600603010001
+NxpHal:     read successful status = 0x0
+NxpNciR:     len =  20 > 000011046CAA4A7A2A6280B2480000E110120000
+NxpHal:     read successful status = 0x0
+NxpNciX:     len =   5 > 0000023004
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   6 > 600603010001
+NxpHal:     read successful status = 0x0
+NxpNciR:     len =  20 > 0000110103A00C340300FE000000000000000000
+NxpHal:     read successful status = 0x0
+		Record Found :
+				NDEF Content Max size :     '137 bytes'
+				NDEF Actual Content size :     '0 bytes'
+				ReadOnly :                      'FALSE'
+2022:11:24-16:13:59.196	NxpFunc:    nativeNfcTag_doReadNdef: invalide buffer!
+				Read NDEF Content Failed
+NxpNciX:     len =   5 > 0000023000
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   6 > 600603010001
+NxpHal:     read successful status = 0x0
+NxpNciR:     len =  20 > 000011046CAA4A7A2A6280B2480000E110120000
+NxpHal:     read successful status = 0x0
+NxpNciX:     len =   5 > 0000023000
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   6 > 600603010001
+NxpHal:     read successful status = 0x0
+NxpNciR:     len =  20 > 000011046CAA4A7A2A6280B2480000E110120000
+NxpHal:     read successful status = 0x0
+NxpNciX:     len =   5 > 0000023000
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   6 > 600603010001
+NxpHal:     read successful status = 0x0
+NxpNciR:     len =  20 > 000011046CAA4A7A2A6280B2480000E110120000
+NxpHal:     read successful status = 0x0
+NxpNciX:     len =   5 > 0000023000
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   6 > 600603010001
+NxpHal:     read successful status = 0x0
+NxpNciR:     len =  20 > 000011046CAA4A7A2A6280B2480000E110120000
+NxpHal:     read successful status = 0x0
+NxpNciX:     len =   5 > 0000023000
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   6 > 600603010001
+NxpHal:     read successful status = 0x0
+NxpNciR:     len =  20 > 000011046CAA4A7A2A6280B2480000E110120000
+NxpHal:     read successful status = 0x0
+NxpNciX:     len =   5 > 0000023000
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   6 > 600603010001
+NxpHal:     read successful status = 0x0
+NxpNciR:     len =  20 > 000011046CAA4A7A2A6280B2480000E110120000
+NxpHal:     read successful status = 0x0
+NxpNciX:     len =   5 > 0000023000
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   6 > 600603010001
+NxpHal:     read successful status = 0x0
+NxpNciR:     len =  20 > 000011046CAA4A7A2A6280B2480000E110120000
+NxpHal:     read successful status = 0x0
+NxpNciX:     len =   5 > 0000023000
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   6 > 600603010001
+NxpHal:     read successful status = 0x0
+NxpNciR:     len =  20 > 000011046CAA4A7A2A6280B2480000E110120000
+NxpHal:     read successful status = 0x0
+NxpNciX:     len =   5 > 0000023000
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   6 > 600603010001
+NxpHal:     read successful status = 0x0
+NxpNciR:     len =  20 > 000011046CAA4A7A2A6280B2480000E110120000
+NxpHal:     read successful status = 0x0
+NxpNciX:     len =   5 > 0000023000
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   6 > 600603010001
+NxpHal:     read successful status = 0x0
+NxpNciR:     len =  20 > 000011046CAA4A7A2A6280B2480000E110120000
+NxpHal:     read successful status = 0x0
+NxpNciX:     len =   5 > 0000023000
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   6 > 600603010001
+NxpHal:     read successful status = 0x0
+NxpNciR:     len =  20 > 000011046CAA4A7A2A6280B2480000E110120000
+NxpHal:     read successful status = 0x0
+NxpNciX:     len =   5 > 0000023000
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   6 > 600603010001
+NxpHal:     read successful status = 0x0
+	NFC Tag Lost
+
+Waiting for a Tag/Device...
+
+NxpNciX:     len =   4 > 21060103
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   4 > 41060100
+NxpHal:     read successful status = 0x0
+NxpNciR:     len =   5 > 6106020300
+NxpHal:     read successful status = 0x0
+:
+NxpNciX:     len =   4 > 21060100
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   4 > 41060100
+NxpHal:     read successful status = 0x0
+NxpNciX:     len =  26 > 20021701291446666D010111020207FF03020003040164070103
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   5 > 4002020000
+NxpHal:     read successful status = 0x0
+NxpHal:     phNxpNciHal_print_res_status: response status =STATUS_OK
+NxpNciX:     len =  16 > 20020D04320120310100380101500100
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   5 > 4002020000
+NxpHal:     read successful status = 0x0
+NxpHal:     phNxpNciHal_print_res_status: response status =STATUS_OK
+NxpHal:     > Polling Loop Started
+NxpNciX:     len =  22 > 21031309000101010201030105018001810106017001
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   4 > 41030100
+NxpHal:     read successful status = 0x0
+NxpNciX:     len =   4 > 21060100
+NxpHal:     write successful status = 0x0
+NxpNciR:     len =   4 > 41060100
+NxpHal:     read successful status = 0x0
+Leaving ...
+
+2022:11:24-16:14:09.509	NxpFunc:    RoutingManager::nfaEeCallback: unknown event=2 ????
