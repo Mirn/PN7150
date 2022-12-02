@@ -86,7 +86,7 @@ impl TmlTrait for Tml {
         }
 
         let base_len = 3;
-        let extra_offs = 12;
+        let extra_offs = 2;
         assert!(extra_offs < base_len);
 
         let res = self.i2c.read(&mut buffer[0 .. base_len]);
